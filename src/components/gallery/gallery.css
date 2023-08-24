@@ -1,0 +1,149 @@
+#gallery {
+    width: 100%;
+    background-color: #E76B47;
+    background-size: 100% 32%;
+    background: linear-gradient(to bottom, #E76B47 32%, #F6F6F6 32%);
+    padding-bottom: 100px;
+}
+
+#gallery .inner {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#gallery .text {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+
+#gallery .text > * {
+    width: 50%;
+}
+
+#gallery h2 {
+    margin: 0;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 0.95;
+    letter-spacing: -4px;
+    color: #FFFFFF;
+}
+
+#gallery p {
+    width: 100%;
+    padding-top: 14px;
+    margin: 0;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 120%;
+    color: #FFFFFF;
+}
+
+#gallery .carousel img {
+    width: 100%;
+}
+
+#gallery .controls {
+    display: flex;
+    gap: 10px;
+    padding: 25px 0;
+}
+
+#gallery button {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid #3A3A3E;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#gallery button:first-child {
+    background-color: #3A3A3E;
+}
+
+#gallery .text>*:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+#gallery .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#gallery .media {
+    display: none;
+}
+
+@media screen and (min-width: 1281px) {
+    #gallery .inner {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #gallery .inner {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    #gallery h2 {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 0.95;
+        letter-spacing: -2px;
+    }
+
+    #gallery p {
+        max-width: 100%;
+    }
+
+    #gallery .text>* {
+        width: 100%;
+    }
+
+    #gallery .text {
+        flex-direction: column;
+    }
+
+    #gallery .carousel {
+        height: 350px;
+    }
+
+    #gallery .carousel .img-con {
+        overflow: hidden;
+        position: relative;
+        height: 350px;
+        width: 100%;
+    }
+
+    #gallery .carousel .img-con img {
+        width: unset;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #gallery .flex {
+        display: none;
+    }
+
+    #gallery .media {
+        display: block;
+    }
+
+    #gallery .controls {
+        width: 60%;
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

@@ -1,0 +1,198 @@
+#layouts {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+#layouts .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#layouts .filter {
+    display: flex;
+    gap: 10px;
+}
+
+#layouts .header button {
+    min-width: 49px;
+    height: 49px;
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 120%;
+    color: #3A3A3E;
+    background-color: white;
+    cursor: pointer;
+}
+
+#layouts .header button.current {
+    background-color: #E76B47;
+    color: white;
+}
+
+#layouts h2 {
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 95%;
+    letter-spacing: -4px;
+    background: -webkit-linear-gradient(288.47deg, #3A3A3E 28.49%, #B9B9BE 106.94%);
+    background: linear-gradient(288.47deg, #3A3A3E 28.49%, #B9B9BE 106.94%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 64px !important;
+}
+
+#layouts .layouts-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+    row-gap: 20px;
+}
+
+#layouts .layout-item {
+    width: calc(50% - 10px);
+    background-color: white;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#layouts .layout-item:nth-child(even) {
+    animation-delay: 0.2s;
+}
+
+#layouts .layout-item img {
+    width: 40%;
+}
+
+#layouts hr {
+    margin: 0;
+    opacity: 0.5;
+    border: 0.7px solid #3A3A3E;
+    height: 120px;
+}
+
+#layouts .info {
+    width: 60%;
+    /* padding: 40px 60px; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+#layouts .info div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#layouts .info p {
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: right;
+    color: #3A3A3E;
+    width: 60%;
+}
+
+#layouts .info span {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 120%;
+    color: #C95C3E;
+    width: 30%;
+}
+
+#layouts .info hr {
+    height: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+    #layouts .info p {
+        font-size: 13px;
+    }
+
+    #layouts .info span {
+        font-size: 30px;
+    }
+
+    #layouts .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #layouts {
+        width: 100%;
+        padding: 0 20px 100px;
+    }
+
+    #layouts .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 30px;
+    }
+
+    #layouts h2 {
+        font-size: 36px;
+        line-height: 95%;
+        letter-spacing: -2px;
+    }
+
+    #layouts .layouts-flex {
+        flex-direction: column;
+    }
+
+    #layouts .layout-item {
+        width: 100%;
+        flex-direction: column;
+        padding-left: 30px;
+        padding-top: 10px;
+    }
+
+    #layouts .layout-item img {
+        width: 100%;
+    }
+
+    #layouts .layout-item>hr {
+        display: none;
+    }
+
+    #layouts .info {
+        padding-top: 0;
+        width: 100%;
+    }
+
+    #layouts .info hr {
+        height: 20px;
+    }
+
+    #layouts .info p {
+        width: 40%;
+        font-size: 16px;
+    }
+
+    #layouts .info span {
+        width: 40%;
+        font-size: 40px;
+    }
+
+    #layouts .filter {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 1281px) {
+    #layouts {
+        width: 70%;
+    }
+}

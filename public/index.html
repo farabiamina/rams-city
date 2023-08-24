@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="./favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+  <title>Rams-city</title>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PM36B69');</script>
+  <!-- End Google Tag Manager -->
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PM36B69" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <script>
+    window.gid = "/";
+    function getParam(p) {
+      var match = RegExp('[?&]' + p + '=([^&]*)').exec(window.location.search);
+      return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+    }
+    function getExpiryRecord(value) {
+      var expiryPeriod = 90 * 24 * 60 * 60 * 1000; // окончание 90-дневного периода в миллисекундах
+      var expiryDate = new Date().getTime() + expiryPeriod;
+      return {
+        value: value,
+        expiryDate: expiryDate
+      };
+    }
+    function addGclid() {
+      var gid = window.gid;
+      var gclidParam = getParam('gclid');
+      // console.log(gclidParam);
+      var gclidFormFields = ['gclid_field']; // укажите все возможные идентификаторы полей формы, в которых может содержаться GCLID
+      var gclidRecord = null;
+      var currGclidFormField;
+
+      var gclsrcParam = getParam('gclsrc');
+
+      var isGclsrcValid = !gclsrcParam || gclsrcParam.indexOf('aw') !== -1;
+
+      gclidFormFields.forEach(function (field) {
+        if (document.getElementById(field)) {
+          currGclidFormField = document.getElementById(field);
+          console.log(currGclidFormField);
+        }
+      });
+
+      if (gclidParam && isGclsrcValid) {
+        gclidRecord = getExpiryRecord(gclidParam);
+        localStorage.setItem('gclid', JSON.stringify(gclidRecord));
+      }
+
+      var gclid = gclidRecord || JSON.parse(localStorage.getItem('gclid'));
+      var isGclidValid = gclid && new Date().getTime() < gclid.expiryDate;
+
+      if (currGclidFormField && isGclidValid) {
+        currGclidFormField.value = gclid.value;
+        console.log(gclid.value);
+        window.gid = gclid.value;
+        console.log(window.gid);
+      }
+    }
+    window.addEventListener('load', addGclid);
+  </script>
+</body>
+
+</html>

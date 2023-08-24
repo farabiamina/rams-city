@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'TTInterface';
+  src: url('../public/fonts/TTInterfaces-Regular.ttf') format('truetype');
+}
+
+html {
+  width: 100%;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  font-family: 'TTInterface', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #F6F6F6;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.animate {
+  opacity: 0;
+  animation: fade-in-up 1s ease-in-out both;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    /* Adjust the vertical distance as needed */
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    /* Adjust the vertical distance as needed */
+  }
+}
+
+/* section {
+  overflow-x: hidden;
+} */
+
+h2 {
+  line-height: 95% !important;
+}
+
+@media screen and (max-width: 728px) {
+  h2 {
+    line-height: 45px !important;
+  }
+}

@@ -1,0 +1,194 @@
+#boulevard {
+    background-color: #E76B47;
+    padding-top: 150px;
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 300px;
+    margin-bottom: -5px;
+}
+
+#boulevard .inner {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#boulevard h2 {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #FFFFFF;
+    padding-left: 100px;
+}
+
+#boulevard .p-con {
+    position: relative;
+    z-index: 20;
+    animation-delay: 0.2s;
+}
+
+#boulevard .p-con-2 {
+    position: relative;
+    z-index: 21;
+}
+
+#boulevard .p-con-2 p {
+    margin: 0;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #FFFFFF;
+    text-transform: unset;
+    width: 500px;
+    margin-left: auto;
+}
+
+#boulevard p {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    width: 800px;
+    max-width: 100%;
+}
+
+#boulevard .pics {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+#boulevard .main-pic {
+    width: 75%;
+    height: 0;
+    padding-bottom: 84.7%;
+    /* background-image: url("../../images/boulevard1.png");
+    background-size: contain; */
+    position: relative;
+    top: -90px;
+    /* z-index: 1; */
+    /* overflow: hidden; */
+    /* border: 1ps solid greenyellow; */
+}
+
+#boulevard .main-pic-inner {
+    position: relative;
+    width: 100%;
+    height: 0;
+    /* border: 1px solid red; */
+    padding-bottom: 113%;
+    overflow: hidden;
+    z-index: 10;
+    background-image: url("../../images/boulevard1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 60%;
+    /* border: 1px solid rgb(4, 0, 255); */
+}
+
+#boulevard .small-pic {
+    position: relative;
+    width: calc(25% + 80px);
+    z-index: 11;
+    margin-right: -80px;
+}
+
+#boulevard .small-pic img {
+    width: 100%;
+}
+
+#boulevard .main-pic .stroke,
+#boulevard .fill {
+    height: 30%;
+    position: absolute;
+    top: 30%;
+    left: -20%;
+}
+
+@media screen and (min-width: 1281px) {
+    #boulevard .inner {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #boulevard .p-con p {
+        font-size: 20px;
+    }
+
+    #boulevard .main-pic .stroke,
+    #boulevard .fill {
+        height: 25%;
+        position: absolute;
+        top: 30%;
+        left: -5%;
+    }
+}
+
+@media screen and (max-width: 728px) {
+    #boulevard {
+        padding-bottom: 0;
+        padding-top: 90px;
+    }
+
+    #boulevard .inner {
+        width: 100%;
+        padding: 0 20px 200px;
+    }
+
+    #boulevard .main-pic .stroke,
+    #boulevard .fill {
+        display: none;
+    }
+
+    #boulevard {
+        background-image: url("../../images/boulevard1.png");
+        background-size: 150%;
+        background-position: 60% 30%;
+        background-repeat: no-repeat;
+    }
+
+    #boulevard h2 {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 95%;
+        letter-spacing: -2px;
+        background: -webkit-linear-gradient(106.77deg, #FFFFFF 9.43%, #D0E3EF 92.45%);
+        background: linear-gradient(106.77deg, #FFFFFF 9.43%, #D0E3EF 92.45%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        padding: 0;
+    }
+
+    #boulevard .p-con p {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 1.2;
+        color: #FFFFFF;
+        text-transform: unset;
+    }
+
+    #boulevard .main-pic-inner,
+    #boulevard .main-pic {
+        display: none;
+    }
+
+    #boulevard .pics {
+        position: relative;
+        width: 100%;
+        display: block;
+    }
+
+    #boulevard .small-pic {
+        position: static;
+        /* background-image: url("../../images/boulevard1.png"); */
+        /* background-size: contain; */
+        width: 100%;
+        padding-top: 300px;
+    }
+
+    #boulevard .p-con-2 p {
+        width: 100%;
+    }
+}

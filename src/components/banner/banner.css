@@ -1,0 +1,240 @@
+#banner {
+    width: 100%;
+}
+
+#banner .top-inner {
+    position: relative;
+}
+
+#banner .banner-img {
+    width: 100%;
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    background: #F6F6F6;
+}
+
+#banner .banner-img .bottom {
+    width: 100%;
+    display: block;
+}
+
+#banner .banner-img .top {
+    width: 30.657%;
+    margin-left: 56.6%;
+}
+
+#banner .full {
+    display: none;
+    width: 100%;
+}
+
+#banner .header-text {
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    z-index: 1;
+}
+
+#banner .header-text span {
+    display: block;
+}
+
+#banner .header-text span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+#banner .header-text p {
+    margin: 0 0 10px 0;
+    font-weight: 600;
+    font-size: 16px;
+    color: #3A3A3E;
+}
+
+#banner .header-text h1 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 64px;
+    color: #E76B47;
+    letter-spacing: -4px;
+    line-height: 0.93;
+    animation-delay: 0.2s;
+}
+
+#banner .circle {
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    background: #E76B47;
+    border-radius: 95px;
+    top: 27%;
+    left: calc(50% - 95px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#banner .circle:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+#banner .circle span {
+    width: 50%;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+}
+
+#banner .cards {
+    position: relative;
+    top: -100px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+#banner .card-wrapper {
+    position: relative;
+    width: 24%;
+}
+
+#banner .card {
+    height: 350px;
+    background-color: white;
+    z-index: 300;
+    bottom: 0;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.5s;
+}
+
+#banner .card-wrapper:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+#banner .card-wrapper:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+#banner .card-wrapper:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+#banner .card:hover {
+    /* top: -10px; */
+    transform: translateY(-10px);
+    box-shadow: 0px 20px 50px -20px rgba(59, 59, 62, 0.15);
+}
+
+@media screen and (max-width: 1240px) {
+    #banner .header-text h1 {
+        font-size: 46px;
+    }
+
+    #banner .header-text p {
+        font-size: 14px;
+    }
+
+    #banner .card p {
+        font-size: 12px;
+    }
+
+    #banner .card {
+        padding: 20px;
+        height: 280px;
+    }
+    #banner .circle {
+        width: 150px;
+        height: 150px;
+        border-radius: 75px;
+        left: calc(50% - 75px);
+        top: calc(27% + 25px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* #banner * {
+        pointer-events: none;
+        overflow: hidden;
+    } */
+
+    #banner .banner-img {
+        display: none;
+    }
+
+    #banner .full {
+        display: block;
+    }
+
+    #banner .cards {
+        top: 10px;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+        width: 100%;
+    }
+
+    #banner .card-wrapper {
+        width: 100%;
+    }
+
+    #banner .card p {
+        font-size: 16px;
+    }
+
+    #banner .top-inner {
+        position: static;
+    }
+
+    #banner .header-text {
+        position: static;
+        padding: 100px 0 30px 0px;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    #banner .header-text p {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 1.2;
+    }
+
+    #banner .header-text h1 {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 0.93;
+        letter-spacing: -2px;
+    }
+
+    #banner .circle {
+        position: relative;
+        bottom: 75px;
+        width: 150px;
+        height: 150px;
+        border-radius: 75px;
+        left: calc(50% - 75px)
+    }
+
+    #banner .card {
+        pointer-events: none;
+    }
+}
+
+@media screen and (min-width: 1281px) {
+    #banner .cards {
+        width: 70%;
+    }
+    #banner .header-text {
+        left: 14%;
+    }
+}

@@ -1,0 +1,262 @@
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Semi-transparent dark background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal {
+    width: 900px;
+    height: 517px;
+    background-color: #F6F6F6;
+    padding: 30px 30px 30px 50px;
+    display: flex;
+    gap: 60px;
+    position: relative;
+}
+
+.modal .close {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: -35px;
+    /* width: 3%; */
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fade-in 0.5s ease-in-out both;
+}
+
+.modal input[type="text"]::placeholder {
+    text-transform: none;
+    opacity: 0.2;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* .modal .left {
+    width: 100%;
+} */
+
+.modal .right {
+    width: 550px;
+}
+
+.modal h2  {
+    margin: 0;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: unset !important;
+    letter-spacing: -4px;
+    color: #3A3A3E;
+}
+
+.modal .h2-con {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+}
+
+.modal .h2 {
+    font-weight: 600;
+    font-size: 64px;
+    letter-spacing: -4px;
+    color: #3A3A3E;
+}
+
+/* .modal .h2:nth-child(2) {
+    line-height: 60px;
+} */
+
+/* .modal .h2:nth-child(2) {
+    line-height: 60px;
+} */
+
+.modal p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 120%;
+    color: #3A3A3E;
+    text-align: left !important;
+}
+
+.modal .right div {
+    width: 100%;
+    height: 100%;
+    background-color: #E76B47;
+    position: relative;
+}
+
+.modal .right div img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+}
+
+.modal form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.modal form>.text {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal label {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.2;
+    text-transform: lowercase;
+    color: #3A3A3E;
+    opacity: 0.5;
+}
+
+.modal input[type="text"] {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    text-transform: capitalize;
+    color: #3A3A3E;
+    margin-top: 10px;
+    border-bottom: 0.5px solid #3A3A3E;
+    border-radius: 0;
+}
+
+.modal button {
+    display: block;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: flex-end;
+    padding: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #3A3A3E;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.modal .arrow {
+    transition: color 0.2s;
+    transition: transform 0.2s;
+}
+
+.modal button:hover {
+    color: #E76B47;
+}
+
+.modal button:hover .arrow {
+    transform: translateX(5px);
+}
+
+.modal label>input[type="checkbox"] {
+    display: none;
+}
+
+.modal label>input[type="checkbox"]+div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal label>input[type="checkbox"]+div::before {
+    content: "";
+    display: inline-block;
+    vertical-align: bottom;
+    width: 14px;
+    height: 14px;
+    border-radius: 10%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #3A3A3E;
+}
+
+.modal label>input[type="checkbox"]:checked+*::before {
+    content: "✓";
+    color: #3A3A3E;
+    text-align: center;
+}
+
+.modal .arrow {
+    margin-left: 10px;
+}
+
+.modal .error {
+    height: 15px;
+    color: rgb(255, 119, 119);
+    font-size: 11px;
+    margin-top: 4px;
+    opacity: 1;
+}
+
+
+@media screen and (max-width: 900px) {
+    .modal-container {
+        align-items: center;
+    }
+
+    .modal {
+        flex-direction: column-reverse;
+        width: 90%;
+        min-height: 575px;
+        padding: 30px;
+        gap: 20px;
+    }
+
+    .modal .right {
+        margin: 0 auto;
+        width: 200px;
+        height: 30%;
+    }
+
+    .modal .right img {
+        width: 100%;
+        /* width: 200px; */
+    }
+
+    .modal .h2 {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 100%;
+        letter-spacing: -1px;
+    }
+
+    .modal label {
+        font-size: 12px;
+    }
+
+    /* .modal form {
+        gap: 10px;
+    } */
+
+    .modal input[type="text"] {
+        margin-top: 5px;
+    }
+}
